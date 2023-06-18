@@ -12,9 +12,10 @@
         public string? Situation { get; set; }
         public DateTime RegDate { get; set; }
 
-        // Compositions
+        // Composition
         public Contact? Contact { get; set; }
         public ICollection<Address>? Addresses { get; set; }
+        public ICollection<Department>? Departments { get; set; }
 
         // Constructors
         public User() { }

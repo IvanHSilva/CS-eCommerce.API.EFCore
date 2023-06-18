@@ -6,10 +6,10 @@
         public string? Phone { get; set; }
         public string? CellPhone { get; set; }
 
-        // Compositions
+        // Composition
         public User? User { get; set; }
 
-        // Constructor
+        // Constructors
         public Contact() { }
 
         public Contact(int id, int userId, string? phone, string? cellPhone) {
