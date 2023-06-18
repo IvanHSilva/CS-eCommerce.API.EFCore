@@ -12,10 +12,15 @@
         public string? Situation { get; set; }
         public DateTime RegDate { get; set; }
 
+        // Composition
+        public Contact? Contact { get; set; }
+
         // Constructors
         public User() { }
 
-        public User(int id, string name, string eMail, string gender, string rg, string cpf, string filiation, string situation, DateTime regDate) {
+        public User(int id, string? name, string? eMail, string? gender, 
+            string? rg, string? cpf, string? filiation, string? situation, 
+            DateTime regDate) {
             Id = id;
             Name = name;
             EMail = eMail;
