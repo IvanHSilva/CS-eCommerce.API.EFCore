@@ -6,7 +6,7 @@
         public string? Phone { get; set; }
         public string? CellPhone { get; set; }
 
-        // Composition
+        // Compositions
         public User? User { get; set; }
 
         // Constructor
