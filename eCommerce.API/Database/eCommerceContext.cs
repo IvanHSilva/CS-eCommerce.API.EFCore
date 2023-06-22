@@ -13,5 +13,10 @@ namespace eCommerce.API.Database {
         // Database Connection with configure ennviroment and contructor
         public eCommerceContext(DbContextOptions<eCommerceContext> options) : base(options) {}
 
+        // DBSets
+        public DbSet<User> Users { get; set; } = null!;
+        public DbSet<Contact> Contacts { get; set; } = null!;
+        public DbSet<Address> Addresses { get; set; } = null!;
+        public DbSet<Department> Departments { get; set; } = null!;
     }
 }

@@ -2,9 +2,9 @@
     public class User {
         // Attributes
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? EMail { get; set; }
-        public string? Password { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string EMail { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
         public string? Gender { get; set; }
         public string? RG { get; set; }
         public string? CPF { get; set; }
@@ -20,7 +20,7 @@
         // Constructors
         public User() { }
 
-        public User(int id, string? name, string? eMail, string? gender, 
+        public User(int id, string name, string eMail, string? gender, 
             string? rg, string? cpf, string? filiation, string? situation, 
             DateTime regDate) {
             Id = id;
