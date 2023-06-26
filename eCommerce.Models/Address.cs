@@ -1,15 +1,29 @@
-﻿namespace eCommerce.Models {
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace eCommerce.Models {
+    [Table("Enderecos")]
     public class Address {
         // Attributes
+        [Key]
         public int Id { get; set; }
+        [Column("UsuId")]
         public int UserId { get; set; }
+        [Column("Descricao")]
         public string? Description { get; set; }
+        [Column("Rua")]
         public string Street { get; set; } = string.Empty;
+        [Column("Numero")]
         public string Number { get; set; } = string.Empty;
+        [Column("Complemento")]
         public string? Comp { get; set; }
+        [Column("Bairro")]
         public string District { get; set; } = string.Empty;
+        [Column("Cidade")]
         public string City { get; set; } = string.Empty;
+        [Column("Estado")]
         public string State { get; set; } = string.Empty;
+        [Column("CEP")]
         public string ZipCode { get; set; } = string.Empty;
 
         // Composition

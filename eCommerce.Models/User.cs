@@ -1,15 +1,26 @@
-﻿namespace eCommerce.Models {
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace eCommerce.Models {
+    [Table("Usuarios")]
     public class User {
         // Attributes
+        [Key]
         public int Id { get; set; }
+        [Column("Nome")]
         public string Name { get; set; } = string.Empty;
         public string EMail { get; set; } = string.Empty;
+        [Column("Senha")]
         public string Password { get; set; } = string.Empty;
+        [Column("Sexo")]
         public string? Gender { get; set; }
         public string? RG { get; set; }
         public string? CPF { get; set; }
+        [Column("Filiacao")]
         public string? Filiation { get; set; }
+        [Column("Situacao")]
         public string? Situation { get; set; }
+        [Column("DataCad")]
         public DateTime RegDate { get; set; }
 
         // Composition
