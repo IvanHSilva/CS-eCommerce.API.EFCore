@@ -11,7 +11,7 @@ namespace eCommerce.Models {
         public int UserId { get; set; }
         [Column("Descricao")]
         public string? Description { get; set; }
-        [Column("Endereco")]
+        [Column("Rua")]
         public string Street { get; set; } = string.Empty;
         [Column("Numero")]
         public string Number { get; set; } = string.Empty;

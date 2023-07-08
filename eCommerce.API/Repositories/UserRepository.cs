@@ -1,5 +1,6 @@
 ﻿using eCommerce.API.Database;
 using eCommerce.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace eCommerce.API.Repositories {
     public class UserRepository : IUserRepository {
@@ -13,11 +14,12 @@ namespace eCommerce.API.Repositories {
 
         // Queries
         public List<User> GetUsers() {
-            return _db.Users.OrderBy(u => u.Id).ToList();
+            return _db.Users.Include(u => u.Contact).OrderBy(u => u.Id).ToList();
         }
 
         public User GetUser(int id) {
-            return _db.Users.Find(id)!;
+            return _db.Users.Include(u => u.Contact).Include(u => u.Addresses)
+                .FirstOrDefault(u => u.Id == id)!;
         }
 
         // Unit of Works

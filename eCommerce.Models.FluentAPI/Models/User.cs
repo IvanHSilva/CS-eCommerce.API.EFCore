@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eCommerce.Models {
     [Table("Usuarios")]
-    //[Index(nameof(Name), IsUnique = true, Name = "IDX_Name")]
+    [Index(nameof(Name), IsUnique = true, Name = "IDX_Name")]
     public class User {
         // Attributes
         [Key]
@@ -38,8 +39,8 @@ namespace eCommerce.Models {
         // Constructors
         public User() { }
 
-        public User(int id, string name, string eMail, string? gender,
-            string? rg, string? cpf, string? filiation, string? situation,
+        public User(int id, string name, string eMail, string? gender, 
+            string? rg, string? cpf, string? filiation, string? situation, 
             DateTime regDate) {
             Id = id;
             Name = name;

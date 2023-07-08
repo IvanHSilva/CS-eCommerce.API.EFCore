@@ -8,7 +8,7 @@ namespace eCommerce.Models {
         [Key]
         public int Id { get; set; }
         [Column("UsuId")]
-        [ForeignKey("Usuarios")]
+        //[ForeignKey("Usuarios")]
         public int UserId { get; set; }
         [Column("Telefone")]
         public string? Phone { get; set; }
